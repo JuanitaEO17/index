@@ -1,0 +1,259 @@
+*{box-sizing: border-box}
+
+body{
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #f8f5ff, #f3f0f7);
+    color: #222;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container{
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* TITULOS */
+h1{
+    font-size: 34px;
+    margin-bottom: 6px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    border-left: 4px solid #c8a2c8; /* lila */
+    padding-left: 12px;
+}
+
+h3{
+    font-size: 18px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+p{
+    margin-bottom: 12px;
+    color: #555;
+}
+
+/* LINKS */
+a{
+    color: #9d4edd; /* morado */
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: #5a189a;
+}
+
+/* IMAGENES */
+img{
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    margin-bottom: 10px;
+}
+
+/* TARJETAS */
+article{
+    border: 1px solid #eee;
+    padding: 22px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+article:hover{
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+article h3{
+    margin-top: 0;
+}
+
+/* TEXTO PEQUEÑO */
+figcaption{
+    font-size: 13px;
+    color: #888;
+}
+
+/* FORMULARIO */
+form{
+    margin-top: 20px;
+}
+
+form div{
+    margin-bottom: 16px;
+}
+
+label{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* INPUTS */
+input, select, textarea{ 
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+    background-color: #fafafa;
+}
+
+input:focus, select:focus, textarea:focus{
+    outline: none;
+    border: 1px solid #c8a2c8;
+    box-shadow: 0 0 0 3px rgba(200,162,200,0.2);
+}
+
+textarea{
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* BOTON */
+button{
+    padding: 12px 22px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #9d4edd, #c77dff);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(157,78,221,0.3);
+}
+
+/* SECCIONES */
+section{
+    margin-bottom: 45px;
+}
+
+/* NAV */
+nav{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a{
+    color: #555;
+    font-weight: 600;
+    position: relative;
+    padding: 4px 0;
+}
+
+nav a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #c77dff;
+    left: 0;
+    bottom: -4px;
+    transform: scaleX(0);
+    transition: 0.3s;
+}
+
+nav a:hover::after{
+    transform: scaleX(1);
+}
+
+nav a:hover{
+    color: #000;
+}
+
+/* PROYECTOS */
+.contenedor-proyectos{
+    display: flex;
+    gap: 25px;
+}
+
+.contenedor-proyectos article{
+    flex: 1;
+}
+
+/* SOBRE MI */
+.sobre-mi-contenido{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.sobre-mi-contenido img{
+    width: 320px;
+    border-radius: 20px;
+    flex-shrink: 0;
+}
+
+.sobre-mi-contenido div{
+    flex: 1;
+}
+
+/* HEADER */
+header{
+    text-align: center;
+    margin-bottom: 40px;
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* SCROLL */
+html{
+    scroll-behavior: smooth;
+}
+
+/* TEXTO DESTACADO */
+section p strong{
+    color: #9d4edd;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+    .contenedor-proyectos{
+        flex-direction: column;
+    }
+
+    .sobre-mi-contenido{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container{
+        padding: 20px;
+    }
+
+    h1{
+        font-size: 28px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+}
